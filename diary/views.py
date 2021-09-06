@@ -7,4 +7,4 @@ def index(request):
     return render(request, 'diary/index.html')
 
 class IndexView(generic.TemplateView):
-    template_name="diary/base.html"
+    template_name="diary/index.html"
