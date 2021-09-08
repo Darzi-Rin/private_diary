@@ -129,8 +129,6 @@ STATICFILES_DIRS = (
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-EMAIL_BACKEND ='django.core.mail.backends.console.EmailBackend'
-
 #ロギング設定
 LOGGING = {
     'version':1, #1固定
