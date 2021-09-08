@@ -38,5 +38,5 @@ class InquiryForm(forms.Form):
             email
         ]
 
-        message = EmailMessage(subject=subject, body=message, from_email=from_email, to=to_list, cc=cc_list)
-        message.send()
+        msg = EmailMessage(subject=subject, body=message, from_email=from_email, to=to_list, cc=cc_list)
+        msg.send()
