@@ -40,6 +40,11 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'diary.apps.DiaryConfig',
+    'accounts.apps.AccountsConfig',
+
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
 ]
 
 MIDDLEWARE = [
@@ -138,6 +143,26 @@ MESSAGE_TAGS = {
     messages.SUCCESS: 'alert alert-success',
     messages.INFO: 'alert alert-info',
 }
+
+AUTH_USER_MODEL = 'accounts.CustomUser'
+
+# django-allauthで利用するdjango.contrib.sitesを使うためにサイト識別IDを設定
+SITE_ID = 1
+
+AUTHENTICATION_BACKENDS = (
+    'allauth.account.auth_backends.AuthenticationBackend',
+  # 一般ユーザ用(メールアドレス認証)
+    'django.contrib.auth.backends.ModelBackend'
+  # 管理サイト用(ユーザ名認証)
+)
+
+# メールアドレス認証に変更する設定
+ACCOUNT_AUTHENTICATION_METHOD = 'email'
+ACCOUNT_USERNAME_REQUIRED = False
+
+# サインアップにメールアドレス確認をはさむよう設定
+ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
+ACCOUNT_EMAIL_REQUIRED = True
 
 #ロギング設定
 LOGGING = {

@@ -8,9 +8,12 @@ python manage.py runserver
 #cdコマンド
 cd private_diary/
 
-#
+#マイグレーション
+python manage.py makemigration ←1
+python manage.py migrate ←2
 
-#
+#django-allauthインストール
+pip install django-allauth
 
 #
 
