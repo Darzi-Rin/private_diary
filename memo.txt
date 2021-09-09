@@ -1,21 +1,25 @@
 #ターミナルからプッシュ
-git commit -a -m "コミット名"
-git push
+$ git commit -a -m "コミット名"
+$ git push
 
 #サーバー起動
-python manage.py runserver
+$ python manage.py runserver
 
 #cdコマンド
-cd private_diary/
+$ cd private_diary/
 
 #マイグレーション
-python manage.py makemigration ←1
-python manage.py migrate ←2
+$ python manage.py makemigration ←1
+$ python manage.py migrate ←2
 
 #django-allauthインストール
-pip install django-allauth
+$ pip install django-allauth
 
-#
+#スーパーユーザーの作成
+$ python manage.py createsuperuser
+ユーザー名:admin
+メールアドレス:admin@example.com
+パスワード:adminpass
 
 #
 
