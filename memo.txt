@@ -21,7 +21,8 @@ $ python manage.py createsuperuser
 メールアドレス:admin@example.com
 パスワード:adminpass
 
-#
+# 仮想環境に移動
+& c:/Users/student/Documents/private_diary/.env/Scripts/Activate.ps1
 
 #
 
