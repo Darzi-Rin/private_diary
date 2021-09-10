@@ -23,52 +23,18 @@
                         <h2 class="post-title">
                             {{ diary.title }}
                         </h2>
+                        <h3 class="post-subtitle">
+                            {{ diary.content|truncatechars:20 }}
+                        </h3>
                     </a>
+                    <p class="post-meta">{{ diary.created_at }}</p>
                 </div>
-            </div>
-        </div>
-        <div class="col-lg-6 order-lg-1">
-            <div class="p-5">
-                <h2 class="display-4">Web diary</h2>
-                <p>Web上で作成/編集/削除ができる日記</p>
+                <hr>
+                {% empty %}
+                <p>日記がありません</p>
+                {% endfor %}
             </div>
         </div>
     </div>
 </div>
-</section>
-<!-- Content section 2-->
-<section>
-    <div class="container px-5">
-        <div class="row gx-5 align-items-center">
-            <div class="col-lg-6">
-                <div class="p-5"><img class="img-fluid rounded-circle" src="{% static 'assets/img/02.jpg' %}"
-                        alt="..." /></div>
-            </div>
-            <div class="col-lg-6">
-                <div class="p-5">
-                    <h2 class="display-4">Save Your Diary</h2>
-                    <p>あなたの日記をWebに保存</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- Content section 3-->
-<section>
-    <div class="container px-5">
-        <div class="row gx-5 align-items-center">
-            <div class="col-lg-6 order-lg-2">
-                <div class="p-5"><img class="img-fluid rounded-circle" src="{% static 'assets/img/03.jpg' %}"
-                        alt="..." /></div>
-            </div>
-            <div class="col-lg-6 order-lg-1">
-                <div class="p-5">
-                    <h2 class="display-4">Membership System</h2>
-                    <p>会員制のWeb日記サービス</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
 {% endblock %}
