@@ -25,7 +25,7 @@ $ python manage.py createsuperuser
 & c:/Users/student/Documents/private_diary/.env/Scripts/Activate.ps1
 
 # pilllowインストール
-pip install pillow
+$ pip install pillow
 
 #
 
