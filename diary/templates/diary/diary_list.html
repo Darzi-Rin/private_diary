@@ -1,0 +1,74 @@
+{% extends 'diary/base.html' %}
+{% load static %}
+
+{% block title %}日記一覧|PrivateDiary{% endblock %}
+
+{% block active_diary_list %}active{% endblock %}
+
+{% block head %}
+<link href="{% static 'css/clean_styles.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block contents %}
+<div class="container">
+    <div class="row">
+        <div class="my-div-style w-100">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <div class="clearfix">
+                    <a class="btn btn-primary float-right" href="#">新規作成</a>
+                </div>
+                {% for diary in diary_list %}
+                <div class="post-preview">
+                    <a href="#">
+                        <h2 class="post-title">
+                            {{ diary.title }}
+                        </h2>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6 order-lg-1">
+            <div class="p-5">
+                <h2 class="display-4">Web diary</h2>
+                <p>Web上で作成/編集/削除ができる日記</p>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+<!-- Content section 2-->
+<section>
+    <div class="container px-5">
+        <div class="row gx-5 align-items-center">
+            <div class="col-lg-6">
+                <div class="p-5"><img class="img-fluid rounded-circle" src="{% static 'assets/img/02.jpg' %}"
+                        alt="..." /></div>
+            </div>
+            <div class="col-lg-6">
+                <div class="p-5">
+                    <h2 class="display-4">Save Your Diary</h2>
+                    <p>あなたの日記をWebに保存</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Content section 3-->
+<section>
+    <div class="container px-5">
+        <div class="row gx-5 align-items-center">
+            <div class="col-lg-6 order-lg-2">
+                <div class="p-5"><img class="img-fluid rounded-circle" src="{% static 'assets/img/03.jpg' %}"
+                        alt="..." /></div>
+            </div>
+            <div class="col-lg-6 order-lg-1">
+                <div class="p-5">
+                    <h2 class="display-4">Membership System</h2>
+                    <p>会員制のWeb日記サービス</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
