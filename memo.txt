@@ -24,7 +24,8 @@ $ python manage.py createsuperuser
 # 仮想環境に移動
 & c:/Users/student/Documents/private_diary/.env/Scripts/Activate.ps1
 
-#
+# pilllowインストール
+pip install pillow
 
 #
 
